@@ -1,0 +1,12 @@
+{
+  "name": "test-support",
+  "description": "A simple build test",
+  "repository": "https://github.com/jayco/bk-test-support",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./test.js"
+  },
+  "devDependencies": {
+    "mocha": "6.2.3"
+  }
+}
