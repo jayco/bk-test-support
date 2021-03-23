@@ -1,7 +1,7 @@
 steps:
   - command: 'echo $$FOO'
     concurrency: 1
-    concurrency_group: "group-$$FOO"
+    concurrency_group: "group-${FOO}"
   - command: 'echo $$FOO'
     concurrency: 1
     concurrency_group: "group-${FOO}"
