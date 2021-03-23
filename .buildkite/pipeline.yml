@@ -3,9 +3,9 @@ steps:
     env:
       FOO: 'test'
     concurrency: 1
-    concurrency_group: 'group-${FOO}'
+    concurrency_group: "group-$FOO"
   - command: 'echo $$FOO'
     env:
       FOO: 'dev'
     concurrency: 1
-    concurrency_group: 'group-${FOO}'
+    concurrency_group: "group-$FOO"
