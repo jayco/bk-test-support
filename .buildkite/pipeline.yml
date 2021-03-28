@@ -1,7 +1,11 @@
+env:
+  BUILDKITE_TRACE_CONTEXT: something
 steps:
-  - command: 'echo $$FOO'
-    concurrency: 1
-    concurrency_group: "group-${FOO}"
-  - command: 'echo $$FOO'
-    concurrency: 1
-    concurrency_group: "group-${FOO}"
+- key: test
+  label: test
+  commands: echo "DONE"
+- key: noop
+  label: noop
+  commands: echo "DONE"
+agents:
+  queue: machine-registry
