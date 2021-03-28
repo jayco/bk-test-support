@@ -3,6 +3,7 @@ env:
 steps:
 - key: test
   label: test
-  commands: echo "DONE"
+  commands:
+  - echo "done"
 agents:
   queue: machine-registry
