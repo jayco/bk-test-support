@@ -4,8 +4,5 @@ steps:
 - key: test
   label: test
   commands: echo "DONE"
-- key: noop
-  label: noop
-  commands: echo "DONE"
 agents:
   queue: machine-registry
