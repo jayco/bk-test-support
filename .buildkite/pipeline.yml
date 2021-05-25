@@ -1,9 +1,15 @@
-env:
-  BUILDKITE_TRACE_CONTEXT: something
 steps:
-- key: test
-  label: test
-  commands:
-  - echo "done"
-agents:
-  queue: machine-registry
+  - command: echo "build things"
+    if: build.branch == 'main'
+  
+  - block: "Deploy to Staging?"
+    branches: "!main"
+
+  - wait
+  
+  - command: echo "deploy things"
+    
+  - wait
+    
+  - command: echo "clean things up"
+    if: build.branch == 'main'
